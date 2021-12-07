@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.views.login"
+             BackgroundColor="#E96F00">
+    
+        <StackLayout Padding="40"
+                     VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand">
+            <Image Source="bryan.png"
+                   WidthRequest="180"
+                   HeightRequest="180"/>
+            <Label Text="Username" FontSize="Large"/>
+            <Entry x:Name="TxtUsername" Placeholder="Username" PlaceholderColor="White" TextColor="Black"/>
+            <Label Text="Password" FontSize="Large"/>
+            <Entry x:Name="TxtPassword" Placeholder="Password" PlaceholderColor="White" TextColor="Black" IsPassword="True"/>
+            <Button
+                BackgroundColor="Transparent"
+                VerticalOptions="Center"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                BorderColor="#E20001"
+                Clicked="Button_Clicked"
+                Text="Login"/>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Vous n'avez de compte créer le " TextColor="White"></Span>
+                        <Span Text="Register" TextColor="White" TextDecorations="Underline"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    
+</ContentPage>
